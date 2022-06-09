@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+
 using UnityEngine;
 
 namespace felipsteles
@@ -18,7 +19,7 @@ namespace felipsteles
         {
             playerManager = GetComponentInParent<PlayerManager>();
             anim = GetComponent<Animator>();
-            inputHandler = GetComponentInParent<InputHandler>();
+            //inputHandler = GetComponentInParent<InputHandler>();
             playerLocomotion = GetComponentInParent<PlayerLocomotion>();
 
             vertical = Animator.StringToHash("Vertical");
@@ -104,7 +105,7 @@ namespace felipsteles
             canRotate = false;
         }
 
-            private void OnAnimatorMove()
+        private void OnAnimatorMove()
         {
             if (playerManager.isInteracting == false)
                 return;
